@@ -1,5 +1,3 @@
-import React from "react";
-
 // ====== 設定（ここを書き換えるだけで全体が更新されます） ======
 const FESTIVAL = {
   title: "Campus Coffee Stand",

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ベースのタイポなど微調整 */
+:root { color-scheme: light; }
+html, body, #root { height: 100%; }
+
+/* 横スクロール用スタイル */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+}
+.scroll-snap-item {
+  scroll-snap-align: start;
+}
+

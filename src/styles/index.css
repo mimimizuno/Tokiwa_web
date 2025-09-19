@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* ベースのタイポなど微調整 */
 :root { color-scheme: light; }

@@ -1,14 +1,63 @@
 @import "tailwindcss";
 
-/* ベースのタイポなど微調整 */
-:root { color-scheme: light; }
-html, body, #root { height: 100%; }
+/* ===== Theme（あなたの現状のままでOK） ===== */
+@theme {
+  --font-sans: "Zen Maru Gothic", ui-sans-serif, system-ui;
+  --color-base:    #FFFFFF;
+  --color-main:    #333333;
+  --color-accent:  #FFD600;
+  --color-muted:   #F5F5F5;
+  --color-subtext: #9CA3AF;
 
-/* 横スクロール用スタイル */
-.scroll-snap-x {
+  --radius-2xl: 1rem;
+  --shadow-soft: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+/* ===== Base（全体既定） ===== */
+:root {
+  color-scheme: light;
+  --nav-h: 56px; /* 固定ナビの高さ（必要に応じて変更） */
+}
+html, body, #root { height: 100%; }
+body { font-family: var(--font-sans); background: var(--color-base); color: var(--color-main); }
+
+/* 画像/動画はデフォでコンテナに収まる */
+img, video { display:block; max-width:100%; height:auto; }
+
+/* iOSセーフエリアを尊重（必要ならヘッダ/フッタで使える） */
+.safe-top   { padding-top: env(safe-area-inset-top); }
+.safe-bottom{ padding-bottom: env(safe-area-inset-bottom); }
+
+/* ===== Utilities（Tailwind v4 の @utility） ===== */
+@utility section {
+  @apply px-5 py-16 md:py-24 max-w-screen-md mx-auto;
+  scroll-margin-top: calc(var(--nav-h) + 16px); /* アンカーの食い込み対策 */
+}
+
+/* 横スクロール（カードカルーセル用） */
+@utility row-snap {
   scroll-snap-type: x mandatory;
 }
-.scroll-snap-item {
+@utility card-snap {
   scroll-snap-align: start;
 }
 
+/* ヒーロー（縦動画：余白ゼロ＋9:16を全面に） */
+@utility hero {
+  @apply relative w-full overflow-hidden;
+  height: 100svh;
+}
+@utility hero-canvas {
+  @apply absolute inset-0;
+}
+@utility hero-video {
+  @apply h-full w-full object-cover;
+  /* 被写体の位置に応じて微調整可能：例 → object-[center_60%] */
+}
+
+/* ナビ背景の半透明/ブラー（スクロール時の見栄え用に使い回し） */
+@utility nav-glass {
+  background: color-mix(in oklab, var(--color-base) 60%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+}

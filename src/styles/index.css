@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  /* フォント（← これが全体既定になる） */
+  --font-sans: "Zen Maru Gothic", ui-sans-serif, system-ui;
+
+  /* 色（クラスは bg-base / text-main などで使える） */
+  --color-base:    #FFFFFF;
+  --color-main:    #333333;
+  --color-accent:  #FFD600;
+  --color-muted:   #F5F5F5;
+  --color-subtext: #9CA3AF;
+
+  /* お好みのトークン（任意） */
+  --radius-2xl: 1rem;
+  --shadow-soft: 0 6px 24px rgba(0,0,0,0.08);
+}
+
 /* ベースのタイポなど微調整 */
 :root { color-scheme: light; }
 html, body, #root { height: 100%; }

@@ -18,7 +18,6 @@ export default function App() {
         <Section id="menu"><Menu /></Section> 
         <Section id="collaboration"><Collaboration /></Section>
       </main>
-
       <Footer />
     </div>
   );

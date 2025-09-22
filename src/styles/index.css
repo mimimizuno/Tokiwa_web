@@ -54,12 +54,27 @@ img, video { display:block; max-width:100%; height:auto; }
 }
 @utility hero-video {
   @apply h-full w-full object-cover;
-  /* 被写体の位置に応じて微調整可能：例 → object-[center_60%] */
 }
 
-/* ナビ背景の半透明/ブラー（スクロール時の見栄え用に使い回し） */
+/* ==================== SideMenu ==================== */
 @utility nav-glass {
   background: color-mix(in oklab, var(--color-base) 60%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* ヒーロー到達で右上に張り付く */
+@utility sticky-safe {
+  @apply sticky z-[80] w-full;
+  top: calc(env(safe-area-inset-top) + 8px);
+}
+
+/* 右サイド固定ドロワー */
+@utility drawer {
+  @apply fixed right-0 top-0 bottom-0 z-[60] flex w-72 max-w-[85vw] flex-col bg-muted shadow-2xl;
+}
+
+/* オーバーレイ */
+@utility drawer-overlay {
+  @apply fixed inset-0 z-50 bg-black/30;
 }

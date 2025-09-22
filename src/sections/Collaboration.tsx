@@ -4,7 +4,7 @@ import { COLLABS } from "../shared/data";
 export function Collaboration() {
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold">Colabolation</h2>
+      <h2 className="text-2xl font-semibold">Collabolation</h2>
       <div className="grid grid-cols-1 gap-4">
         {COLLABS.map((c) => (
           <motion.a

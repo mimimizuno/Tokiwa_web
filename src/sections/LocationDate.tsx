@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
+import { fadeIn, fadeItem } from "../shared/motion";
 import { festival } from "../shared/data";
 
 export function LocationDate() {
   return (
     <>
-      <h1 className="section-title">Location & Date</h1>
+      <motion.div
+       className="section-title"
+       {...fadeIn()}
+      >
+        Location & Date
+      </motion.div>
       <motion.div
         className="accent-text"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15, duration: 0.5 }}
+        {...fadeIn()}
       >
         {festival.name}
       </motion.div>
@@ -49,9 +52,14 @@ export function LocationDate() {
         </motion.ul>
         <div className="space-y-4">
           <div className="rounded-2xl border border-neutral-200 p-4">
-            <h3 className="accent-text">会場</h3>
-            <p className="mt-1 text-neutral-700">{festival.venue.name}</p>
-            <p className="text-neutral-600">{festival.venue.address}</p>
+            <motion.div
+              className="accent-text"
+              {...fadeIn()}
+            >
+              会場
+            </motion.div>
+            <p className="mt-1 main-text">{festival.venue.name}</p>
+            <p>{festival.venue.address}</p>
           </div>
           <motion.div
             className="overflow-hidden rounded-2xl shadow-soft"

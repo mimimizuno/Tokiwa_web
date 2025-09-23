@@ -13,10 +13,10 @@ export default function App() {
       <main>
         <HeroVideo />
         <SideMenu />
-        <Section id="concept"><Concept /></Section>
-        <Section id="location-date"><LocationDate /></Section>
-        <Section id="menu"><Menu /></Section> 
-        <Section id="collaboration"><Collaboration /></Section>
+        <Section id="concept" className="section"><Concept /></Section>
+        <Section id="location-date" className="section"><LocationDate /></Section>
+        <Section id="menu" className="section"><Menu /></Section> 
+        <Section id="collaboration" className="section"><Collaboration /></Section>
       </main>
       <Footer />
     </div>

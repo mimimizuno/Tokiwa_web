@@ -1,25 +1,64 @@
 import { motion } from "framer-motion";
+import { fadeIn, fadeItem } from "../shared/motion";
+import { festival } from "../shared/data";
 
 export function LocationDate() {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold">Location & Date</h2>
-      <div className="text-neutral-700 space-y-2">
-        <p>出店期間：2025年10月31日〜11月2日</p>
-        <p>場所：横浜国立大学（常盤祭）</p>
-      </div>
+    <>
+      <motion.h1 className="section-title" {...fadeIn()}>
+        Location & Date
+      </motion.h1>
 
-      <motion.a
-        href="https://maps.google.com/?q=%E6%A8%AA%E6%B5%9C%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6"
-        target="_blank"
-        rel="noreferrer"
-        className="block rounded-xl2 overflow-hidden border border-neutral-200 shadow-soft"
-        whileHover={{ scale: 1.01 }}
+      <motion.h2 className="accent-text" {...fadeIn(0.20)}>
+        {festival.name}
+      </motion.h2>
+
+      <p className="main-text">常盤祭で３日間出店いたします。オープンする期間と場所は以下の通りです。みなさんにお会いできるのを楽しみにしています。</p>
+
+      <motion.ul
+        className="list-split"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
       >
-        {/* 簡易マップ（静的画像）: /public/images/map.png を用意 */}
-        <img src="/images/map.png" alt="横浜国立大学 簡易マップ" className="w-full h-auto" />
-        <div className="px-4 py-3 text-sm text-neutral-600 bg-white">Google Mapで開く</div>
-      </motion.a>
-    </div>
+        {festival.days.map((d) => (
+          <motion.li
+            key={d.dateLabel}
+            className="flex items-center justify-between px-4 py-3"
+            variants={fadeItem}
+          >
+            <span className="main-text">{d.dateLabel}</span>
+            <span className="main-text">{d.time}</span>
+          </motion.li>
+        ))}
+      </motion.ul>
+
+      <div className="space-y-4">
+        <motion.div
+          className="card"
+          {...fadeIn(0.25, 0.55)}
+        >
+          <h2 className="accent-text">会場</h2>
+          <p className="mt-1 main-text">{festival.venue.name}</p>
+          <p>{festival.venue.address}</p>
+        </motion.div>
+
+        <motion.div
+          className="map-frame"
+          {...fadeIn(0.30, 0.6)}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d456.94585251380806!2d139.58947571348637!3d35.474003485796686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI4JzI2LjAiTiAxMznCsDM1JzI5LjgiRQ!5e0!3m2!1sen!2sjp!4v1758525816424!5m2!1sen!2sjp"
+            width="100%"
+            height="320"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </motion.div>
+      </div>
+    </>
   );
 }

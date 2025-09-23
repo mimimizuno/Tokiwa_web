@@ -62,7 +62,7 @@ export const HeroVideo: React.FC = () => {
             animate={titleControls}
             className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center font-[550] tracking-wide"
           >
-            <span className="text-[12vw] leading-none md:text-6xl lg:text-7xl text-neutral-900">
+            <span className="text-[12vw] leading-none md:text-6xl lg:text-7xl font-bold">
               Coffee Stand 305
             </span>
           </motion.h1>

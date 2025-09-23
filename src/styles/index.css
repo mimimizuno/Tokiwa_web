@@ -20,7 +20,16 @@
 }
 
 html, body, #root { height: 100%; }
-body { font-family: var(--font-sans); background: var(--color-base); color: var(--color-main); }
+body { font-family: var(--font-sans); background: var(--color-base); color: var(--color-main);}
+
+/* 本文 */
+@utility main-text {
+  @apply leading-9;
+}
+
+@utility accent-text {
+  @apply text-xl md:text-2xl font-semibold leading-8;
+}
 
 /* 画像/動画はデフォでコンテナに収まる */
 img, video { display:block; max-width:100%; height:auto; }
@@ -34,6 +43,10 @@ img, video { display:block; max-width:100%; height:auto; }
   /* sectionの設定。 */
   @apply px-5 py-16 md:py-24 max-w-screen-md mx-auto;
   scroll-margin-top: calc(var(--nav-h) + 16px); /* アンカーの食い込み対策 */
+}
+
+@utility section-title {
+  @apply text-2xl font-semibold py-6;
 }
 
 /* 横スクロール（カードカルーセル用） 1枚ごとに止まるように設定 */
@@ -77,4 +90,21 @@ img, video { display:block; max-width:100%; height:auto; }
 /* オーバーレイ */
 @utility drawer-overlay {
   @apply fixed inset-0 z-50 bg-black/30;
+}
+
+/* ==================== LocationDate ==================== */
+@utility list-split {
+  @apply mt-4 mb-8 divide-y divide-neutral-200 overflow-hidden rounded-2xl border border-neutral-200 shadow-soft;
+}
+
+@utility card {
+  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft;
+}
+
+@utility card-section {
+  @apply p-4 md:p-6;
+}
+
+@utility map-frame {
+  @apply overflow-hidden rounded-2xl shadow-soft;
 }

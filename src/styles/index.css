@@ -27,6 +27,10 @@ body { font-family: var(--font-sans); background: var(--color-base); color: var(
   @apply leading-9;
 }
 
+@utility accent-text {
+  @apply text-xl md:text-2xl font-semibold leading-8;
+}
+
 /* 画像/動画はデフォでコンテナに収まる */
 img, video { display:block; max-width:100%; height:auto; }
 
@@ -87,3 +91,5 @@ img, video { display:block; max-width:100%; height:auto; }
 @utility drawer-overlay {
   @apply fixed inset-0 z-50 bg-black/30;
 }
+
+/* ==================== LocationDate ==================== */

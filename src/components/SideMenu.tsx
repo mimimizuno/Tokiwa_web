@@ -4,9 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 type MenuItem = { href: `#${string}`; label: string };
 const menu: MenuItem[] = [
   { href: "#concept", label: "Concept" },
-  { href: "#location-date", label: "Access" },
-  { href: "#menu", label: "Menu" },
-  { href: "#collaboration", label: "Collab" },
+  { href: "#location-date", label: "Location&Date" },
+  { href: "#menu", label: "Coffee" },
+  { href: "#menu", label: "Sweets" },
+  { href: "#collaboration", label: "Collaboration" },
 ];
 
 export function SideMenu() {

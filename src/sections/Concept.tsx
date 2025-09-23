@@ -4,12 +4,12 @@ import { fadeIn } from "../shared/motion";
 export function Concept() {
     return (
       <>
-        <motion.div
+        <motion.h1
          className="section-title"
          {...fadeIn()}
         >
           Concept
-        </motion.div>
+        </motion.h1>
         <p className="main-text">
           はじめまして。私たちはフルーティーなコーヒーを皆さんに知ってもらいたくて常盤祭に出店することにしました。<br/>
           コーヒー豆はみなとみらいの「BERTH COFFEE みなとみらい」から、

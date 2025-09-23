@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* ===== Theme（あなたの現状のままでOK） ===== */
+/* ==================== Theme ==================== */
 @theme {
   --font-sans: "Zen Maru Gothic", ui-sans-serif, system-ui;
   --color-base:    #FFFFFF;
@@ -13,28 +13,43 @@
   --shadow-soft: 0 6px 24px rgba(0,0,0,0.08);
 }
 
-/* ===== Base（全体既定） ===== */
+/* ==================== Base ==================== */
 :root {
-  color-scheme: light;
+  color-scheme: light; /* ライトモードをデフォルトに */
   --nav-h: 56px; /* 固定ナビの高さ（必要に応じて変更） */
 }
+
 html, body, #root { height: 100%; }
-body { font-family: var(--font-sans); background: var(--color-base); color: var(--color-main); }
+body { font-family: var(--font-sans); background: var(--color-base); color: var(--color-main);}
+
+/* 本文 */
+@utility main-text {
+  @apply leading-9;
+}
+
+@utility accent-text {
+  @apply text-xl md:text-2xl font-semibold leading-8;
+}
 
 /* 画像/動画はデフォでコンテナに収まる */
 img, video { display:block; max-width:100%; height:auto; }
 
-/* iOSセーフエリアを尊重（必要ならヘッダ/フッタで使える） */
+/* iOSセーフエリア */
 .safe-top   { padding-top: env(safe-area-inset-top); }
 .safe-bottom{ padding-bottom: env(safe-area-inset-bottom); }
 
 /* ===== Utilities（Tailwind v4 の @utility） ===== */
 @utility section {
+  /* sectionの設定。 */
   @apply px-5 py-16 md:py-24 max-w-screen-md mx-auto;
   scroll-margin-top: calc(var(--nav-h) + 16px); /* アンカーの食い込み対策 */
 }
 
-/* 横スクロール（カードカルーセル用） */
+@utility section-title {
+  @apply text-2xl font-semibold py-6;
+}
+
+/* 横スクロール（カードカルーセル用） 1枚ごとに止まるように設定 */
 @utility row-snap {
   scroll-snap-type: x mandatory;
 }
@@ -42,7 +57,7 @@ img, video { display:block; max-width:100%; height:auto; }
   scroll-snap-align: start;
 }
 
-/* ヒーロー（縦動画：余白ゼロ＋9:16を全面に） */
+/* ==================== Hero ==================== */
 @utility hero {
   @apply relative w-full overflow-hidden;
   height: 100svh;
@@ -52,12 +67,44 @@ img, video { display:block; max-width:100%; height:auto; }
 }
 @utility hero-video {
   @apply h-full w-full object-cover;
-  /* 被写体の位置に応じて微調整可能：例 → object-[center_60%] */
 }
 
-/* ナビ背景の半透明/ブラー（スクロール時の見栄え用に使い回し） */
+/* ==================== SideMenu ==================== */
 @utility nav-glass {
   background: color-mix(in oklab, var(--color-base) 60%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* ヒーロー到達で右上に張り付く */
+@utility sticky-safe {
+  @apply sticky z-[80] w-full;
+  top: calc(env(safe-area-inset-top) + 8px);
+}
+
+/* 右サイド固定ドロワー */
+@utility drawer {
+  @apply fixed right-0 top-0 bottom-0 z-[60] flex w-72 max-w-[85vw] flex-col bg-muted shadow-2xl;
+}
+
+/* オーバーレイ */
+@utility drawer-overlay {
+  @apply fixed inset-0 z-50 bg-black/30;
+}
+
+/* ==================== LocationDate ==================== */
+@utility list-split {
+  @apply mt-4 mb-8 divide-y divide-neutral-200 overflow-hidden rounded-2xl border border-neutral-200 shadow-soft;
+}
+
+@utility card {
+  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft;
+}
+
+@utility card-section {
+  @apply p-4 md:p-6;
+}
+
+@utility map-frame {
+  @apply overflow-hidden rounded-2xl shadow-soft;
 }

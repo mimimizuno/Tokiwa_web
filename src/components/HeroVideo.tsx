@@ -19,7 +19,8 @@ export const HeroVideo: React.FC = () => {
     const el = videoRef.current;
     const onTimeUpdate = () => {
       if (!el.duration || Number.isNaN(el.duration)) return;
-      const progress = el.currentTime / el.duration; // 0.0 - 1.0
+      const progress = el.currentTime / el.duration;
+      // progressが0.5以上でisDimをtrueに
       if (progress >= 0.5 && !isDim) {
         setIsDim(true);
       }
@@ -44,46 +45,40 @@ export const HeroVideo: React.FC = () => {
   }, [isDim, titleControls]);
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden bg-white">
-      {/* 9:16 固定のキャンバスを画面中央にフィット（はみ出しなし / 黒帯なし） */}
-      <div className="absolute inset-0 flex items-center justify-center">
+    <div className="hero">
+      <div className="hero-canvas flex items-center justify-center">
         <div className="relative h-full" style={{ aspectRatio: "9 / 16" }}>
           <video
             ref={videoRef}
-            className={`h-full w-full object-cover transition-opacity duration-700 ${isDim ? "opacity-40" : "opacity-100"}`}
-            src="/videos/drip_hero.mp4" // 602x1078など 9:16 素材を想定
+            className={`hero-video transition-opacity duration-700 ${isDim ? "opacity-40" : "opacity-100"}`}
+            src="/videos/drip_hero.mp4"
             muted
             playsInline
             autoPlay
             preload="metadata"
           />
-
-          {/* タイトル（後半で前面にフェードイン） */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={titleControls}
             className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center font-[550] tracking-wide"
           >
-            <span className="text-[12vw] leading-none md:text-6xl lg:text-7xl text-neutral-900">
+            <span className="text-[12vw] leading-none md:text-6xl lg:text-7xl font-bold">
               Coffee Stand 305
             </span>
           </motion.h1>
         </div>
       </div>
-
-      {/* 底部にスクロールインジケータ */}
-      <div className="pointer-events-none absolute bottom-6 left-0 right-0 flex items-center justify-center text-sm text-neutral-600">
-        <div className="flex items-center gap-2">
+      <div className="pointer-events-none absolute bottom-6 left-0 right-0 flex justify-center text-sm text-neutral-600 safe-bottom">
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={titleControls}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          className="flex flex-col items-center"
+        >
           <span>Scroll</span>
-          <motion.span
-            aria-hidden
-            initial={{ y: 0, opacity: 0.6 }}
-            animate={{ y: [0, 6, 0], opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-            className="i-lucide-chevron-down block h-4 w-4"
-          />
-        </div>
+          <span className="mt-1 block w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-current" />
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 };

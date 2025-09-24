@@ -15,21 +15,21 @@ export const COFFEES = [
   {
     id: "hand-drip",
     title: "Hand Drip",
-    image: "../../public/images/handdrip_menu.png",
+    image: "../public/images/handdrip_menu.png",
     price: 500,
     desc: "エチオピアとコロンビアの２種類から選択。一杯ずつ丁寧に抽出します。フィルターを通した綺麗な後味で、じんわりと甘くフルーティーなコーヒーです。",
   },
   {
     id: "fp-hot",
     title: "French Press (hot)",
-    image: "../../public/images/frenchpress_menu.png",
+    image: "../public/images/frenchpress_menu.png",
     price: 400,
     desc: "エチオピアのみの提供。オイル感ごと抽出して、リッチな質感とフルーティーな余韻を楽しめます。",
   },
   {
     id: "fp-ice",
     title: "French Press (ice)",
-    image: "../../public/images/frenchpressice_menu.png",
+    image: "../public/images/frenchpressice_menu.png",
     price: 400,
     desc: "エチオピアのみの提供。冷たく澄んだフレンチプレス。より爽やかにフルーティーな余韻を楽しむことができます。",
   },
@@ -39,13 +39,13 @@ export const BEANS = [
   { 
     id: "Ethiopia", 
     title: "エチオピア", 
-    image: "../../public/images/ethiopia_beans.png",
+    image: "../public/images/ethiopia_beans.png",
     desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
   },
   { 
     id: "Colombia",
     title: "コロンビア",
-    image: "../../public/images/tanzania_beans.png",
+    image: "../public/images/tanzania_beans.png",
     desc: "メロン。",
   }
 ]
@@ -53,21 +53,21 @@ export const SWEETS = [
   { 
     id: "cookie",
     title: "クッキー", 
-    image: "../../public/images/cookie.png",
+    image: "../public/images/cookie.png",
     price: 400,
     desc: "オール米粉でグルテンフリー。外側はサクッと、中心にかけてチューイー。",
   },
   { 
     id: "biscotti", 
     title: "ビスコッティ", 
-    image: "../../public/images/biscotti.png", 
+    image: "../public/images/biscotti.png", 
     price: 400,
     desc: "オール米粉でグルテンフリー。固すぎないビスコッティで、サクッと軽いので思わず手が進んじゃいます！", 
   },
   { 
     id: "pound-cake", 
     title: "パウンドケーキ", 
-    image: "../../public/images/poundcake.png", 
+    image: "../public/images/poundcake.png", 
     price: 400,
     desc: "ふわふわしっとり食感のパウンドケーキは食べごたえもあり、フルーティーなコーヒーとも相性抜群！", 
   },

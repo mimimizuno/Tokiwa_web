@@ -57,6 +57,10 @@ img, video { display:block; max-width:100%; height:auto; }
   scroll-snap-align: start;
 }
 
+@utility card {
+  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft;
+}
+
 /* ==================== Hero ==================== */
 @utility hero {
   @apply relative w-full overflow-hidden;
@@ -95,14 +99,6 @@ img, video { display:block; max-width:100%; height:auto; }
 /* ==================== LocationDate ==================== */
 @utility list-split {
   @apply mt-4 mb-8 divide-y divide-neutral-200 overflow-hidden rounded-2xl border border-neutral-200 shadow-soft;
-}
-
-@utility card {
-  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft;
-}
-
-@utility card-section {
-  @apply p-4 md:p-6;
 }
 
 @utility map-frame {

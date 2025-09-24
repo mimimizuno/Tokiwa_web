@@ -5,8 +5,9 @@ type MenuItem = { href: `#${string}`; label: string };
 const menu: MenuItem[] = [
   { href: "#concept", label: "Concept" },
   { href: "#location-date", label: "Location&Date" },
-  { href: "#menu", label: "Coffee" },
-  { href: "#menu", label: "Sweets" },
+  { href: "#menu", label: "Menu" },
+  { href: "#coffee-menu", label: "- Coffee" },
+  { href: "#sweets-menu", label: "- Sweets" },
   { href: "#collaboration", label: "Collaboration" },
 ];
 
@@ -83,11 +84,7 @@ export function SideMenu() {
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.25 }}
             >
-              <div className="mt-16 px-4 py-3 text-lg font-semibold">
-                Menu
-              </div>
-
-              <nav className="flex-1 px-4 py-4 overflow-auto">
+              <nav className="mt-16 flex-1 px-4 py-4 overflow-auto">
                 <ul className="space-y-3 text-main">
                   {menu.map((m, i) => (
                     <li key={m.href}>

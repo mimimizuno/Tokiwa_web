@@ -15,23 +15,37 @@ export const COFFEES = [
   {
     id: "hand-drip",
     title: "Hand Drip",
-    image: "/images/coffee-handdrip.jpg",
-    desc: "産地の個性をダイレクトに。軽やかな酸と甘みを楽しめます。",
+    image: "../../public/images/handdrip_menu.png",
+    desc: "エチオピアとコロンビアの２種類から選択。一杯ずつ丁寧に抽出します。フィルターを通した綺麗な後味で、じんわりと甘くフルーティーなコーヒーです。",
   },
   {
     id: "fp-hot",
     title: "French Press (hot)",
-    image: "/images/coffee-fp-hot.jpg",
-    desc: "オイル感ごと抽出して、リッチな質感と余韻を。",
+    image: "../../public/images/frenchpress_menu.png",
+    desc: "エチオピアのみの提供。オイル感ごと抽出して、リッチな質感とフルーティーな余韻を楽しめます。",
   },
   {
     id: "fp-ice",
     title: "French Press (ice)",
-    image: "/images/coffee-fp-ice.jpg",
-    desc: "冷たく澄んだフレンチプレス。食後にもゴクゴク。",
+    image: "../../public/images/frenchpressice_menu.png",
+    desc: "エチオピアのみの提供。冷たく澄んだフレンチプレス。より爽やかにフルーティーな余韻を楽しむことができます。",
   },
 ] as const;
 
+export const BEANS = [
+  { 
+    id: "Ethiopia", 
+    title: "エチオピア", 
+    image: "../../public/images/Flag_of_Ethiopia.svg.png",
+    desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
+  },
+  { 
+    id: "Colombia",
+    title: "コロンビア",
+    image: "../../public/images/Flag_of_Colombia.svg.png",
+    desc: "メロン。",
+  }
+]
 export const SWEETS = [
   { id: "cookie", title: "クッキー", image: "/images/sweet-cookie.jpg", desc: "ざくっと食感。コーヒーと好相性。" },
   { id: "cake", title: "ケーキ", image: "/images/sweet-cake.jpg", desc: "季節で変わる軽いケーキをご用意。" },

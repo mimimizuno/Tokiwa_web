@@ -49,7 +49,7 @@ export function LocationDate() {
           {...fadeIn(0.30, 0.6)}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d456.94585251380806!2d139.58947571348637!3d35.474003485796686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI4JzI2LjAiTiAxMznCsDM1JzI5LjgiRQ!5e0!3m2!1sen!2sjp!4v1758525816424!5m2!1sen!2sjp"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.219752376247!2d139.58689697692768!3d35.47410637265468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859677d3540eb%3A0xe579713478f13abc!2z44CSMjQwLTAwNjcg56We5aWI5bed55yM5qiq5rWc5biC5L-d5Zyf44Kx6LC35Yy65bi455uk5Y-w77yX77yZ!5e0!3m2!1sja!2sjp!4v1758687322890!5m2!1sja!2sjp"
             width="100%"
             height="320"
             style={{ border: 0 }}

@@ -36,19 +36,35 @@ export const BEANS = [
   { 
     id: "Ethiopia", 
     title: "エチオピア", 
-    image: "../../public/images/Flag_of_Ethiopia.svg.png",
+    image: "../../public/images/ethiopia_beans.png",
     desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
   },
   { 
     id: "Colombia",
     title: "コロンビア",
-    image: "../../public/images/Flag_of_Colombia.svg.png",
+    image: "../../public/images/tanzania_beans.png",
     desc: "メロン。",
   }
 ]
 export const SWEETS = [
-  { id: "cookie", title: "クッキー", image: "/images/sweet-cookie.jpg", desc: "ざくっと食感。コーヒーと好相性。" },
-  { id: "cake", title: "ケーキ", image: "/images/sweet-cake.jpg", desc: "季節で変わる軽いケーキをご用意。" },
+  { 
+    id: "cookie",
+    title: "クッキー", 
+    image: "../../public/images/cookie.png",
+    desc: "オール米粉でグルテンフリー。外側はサクッと、中心にかけてチューイー。",
+  },
+  { 
+    id: "biscotti", 
+    title: "ビスコッティ", 
+    image: "../../public/images/biscotti.png", 
+    desc: "オール米粉でグルテンフリー。固すぎないビスコッティで、サクッと軽いので思わず手が進んじゃいます！", 
+  },
+  { 
+    id: "pound-cake", 
+    title: "パウンドケーキ", 
+    image: "../../public/images/poundcake.png", 
+    desc: "ふわふわしっとり食感のパウンドケーキは食べごたえもあり、フルーティーなコーヒーとも相性抜群！", 
+  },
 ] as const;
 
 export const COLLABS = [

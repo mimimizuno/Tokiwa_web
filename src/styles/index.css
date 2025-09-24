@@ -58,7 +58,7 @@ img, video { display:block; max-width:100%; height:auto; }
 }
 
 @utility card {
-  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft;
+  @apply rounded-2xl border border-neutral-200 p-4 shadow-soft overflow-hidden bg-white;
 }
 
 /* ==================== Hero ==================== */

@@ -14,6 +14,8 @@ export function Menu() {
         <br />
         お菓子は星川の「メリハリベイク」からの提供になります。コーヒーと合うお菓子を用意しておりますのでぜひコーヒーと一緒にお楽しみください。
       </p>
+
+      {/* Beans */}
       <motion.h2 className="accent-text mt-4" {...fadeIn(0.20)}>
         Beans
       </motion.h2>
@@ -25,13 +27,15 @@ export function Menu() {
             {...fadeIn()}
           >
             <img src={b.image} alt={b.title} className="w-full h-40 object-cover" />
-            <div className="main-text">
+            <div>
               <h4 className="main-text">{b.title}</h4>
               <p className="mt-1 text-sm">{b.desc}</p>
             </div>
           </motion.article>
         ))}
       </div>
+
+      {/* Coffee */}
       <motion.h2 id="coffee-menu" className="accent-text mt-4" {...fadeIn(0.20)}>
         Coffee
       </motion.h2>
@@ -46,8 +50,9 @@ export function Menu() {
             {...fadeIn()}
           >
             <img src={c.image} alt={c.title} className="w-full h-40 object-cover" />
-            <div className="main-text">
+            <div>
               <h4 className="main-text">{c.title}</h4>
+              <p>{c.price} 円</p>
               <p className="mt-1 text-sm">{c.desc}</p>
             </div>
           </motion.article>
@@ -66,13 +71,22 @@ export function Menu() {
             {...fadeIn()}
           >
             <img src={s.image} alt={s.title} className="w-full h-40 object-cover" />
-            <div className="main-text">
+            <div>
               <h4 className="main-text">{s.title}</h4>
+              <p>{s.price} 円</p>
               <p className="mt-1 text-sm">{s.desc}</p>
             </div>
           </motion.article>
         ))}
       </div>
+
+      {/* Set */}
+      <motion.h2 id="set-menu" className="accent-text mt-10" {...fadeIn(0.20)}>
+        Set
+      </motion.h2>
+      <p className="main-text">
+        ハンドドリップとお好きなお菓子１つで850円のセットにすることができます。ぜひ一杯一杯丁寧に淹れたコーヒーと美味しいお菓子の組み合わせをお試しください。
+      </p>
     </>
   );
 }

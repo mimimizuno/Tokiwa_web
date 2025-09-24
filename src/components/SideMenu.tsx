@@ -8,6 +8,7 @@ const menu: MenuItem[] = [
   { href: "#menu", label: "Menu" },
   { href: "#coffee-menu", label: "- Coffee" },
   { href: "#sweets-menu", label: "- Sweets" },
+  { href: "#set-menu", label: "- Set" },
   { href: "#collaboration", label: "Collaboration" },
 ];
 

@@ -30,6 +30,7 @@ export function Menu() {
             <div>
               <h4 className="main-text">{b.title}</h4>
               <p className="mt-1 text-sm">{b.desc}</p>
+              <a href={b.url} className="text-sm text-url">豆の詳しい情報を見る</a>
             </div>
           </motion.article>
         ))}

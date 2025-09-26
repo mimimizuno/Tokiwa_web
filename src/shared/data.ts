@@ -41,12 +41,14 @@ export const BEANS = [
     title: "エチオピア", 
     image: "/images/ethiopia_beans.png",
     desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
+    url: "https://berthcoffee.stores.jp/items/66d5906120bc0f0c0cfbd4e5"
   },
   { 
     id: "Colombia",
     title: "コロンビア",
     image: "/images/tanzania_beans.png",
     desc: "メロン。",
+    url: "https://berthcoffee.stores.jp/items/669610a8db80ba0030ee05ee",
   }
 ]
 export const SWEETS = [

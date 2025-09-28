@@ -28,7 +28,7 @@ export function InstaLinkCard({ name, url, image, desc, className = "" }: InstaL
         <p className="line-clamp-1 text-sm text-main/80">{desc}</p>
 
         <span className="mt-1 inline-flex items-center gap-1 text-sm text-url underline decoration-url/40 underline-offset-4 group-hover:decoration-url">
-          Instagramで見る
+          詳しく見る
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
             <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>

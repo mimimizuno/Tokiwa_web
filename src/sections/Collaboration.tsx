@@ -7,7 +7,7 @@ export function Collaboration() {
   return (
     <>
       <motion.h1 className="section-title" {...fadeIn()}>
-        Collabolation
+        Collaboration
       </motion.h1>
       <p className="main-text">
           豆を提供してくださる「BERTH COFFEE みなとみらい」、お菓子を提供してくださる「メリハリベイク」の店舗にもぜひ。

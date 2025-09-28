@@ -16,7 +16,7 @@ export function Menu() {
       </p>
 
       {/* Beans */}
-      <motion.h2 className="accent-text mt-4" {...fadeIn(0.20)}>
+      <motion.h2 className="accent-text mt-10" {...fadeIn(0.20)}>
         Beans
       </motion.h2>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
@@ -43,10 +43,10 @@ export function Menu() {
       </div>
 
       {/* Coffee */}
-      <motion.h2 id="coffee-menu" className="accent-text mt-4" {...fadeIn(0.20)}>
+      <motion.h2 id="coffee-menu" className="accent-text mt-10" {...fadeIn(0.20)}>
         Coffee
       </motion.h2>
-      <p className="main-text">
+      <p className="main-text mt-3">
         ハンドドリップではエチオピアとコロンビアの２種類から選ぶことができます。フレンチプレスはエチオピアでの提供となります。
       </p>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">

@@ -21,18 +21,24 @@ export function Menu() {
       </motion.h2>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
         {BEANS.map((b) => (
-          <motion.article
+          <motion.a
             key={b.id}
+            href={b.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
-            {...fadeIn()}
+            {...fadeIn(0.25)}
           >
             <img src={b.image} alt={b.title} className="w-full h-40 object-cover" />
-            <div>
-              <h4 className="main-text">{b.title}</h4>
-              <p className="mt-1 text-sm">{b.desc}</p>
-              <a href={b.url} className="text-sm text-url">豆の詳しい情報を見る</a>
-            </div>
-          </motion.article>
+            <h4 className="main-text">{b.title}</h4>
+            <p className="mt-1 text-sm">{b.desc}</p>
+            <span className="mt-2 inline-flex items-center gap-1 text-sm text-url underline decoration-url/40 underline-offset-4 group-hover:decoration-url">
+              豆の詳しい情報を見る
+              <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+                <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+          </motion.a>
         ))}
       </div>
 
@@ -48,7 +54,7 @@ export function Menu() {
           <motion.article
             key={c.id}
             className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
-            {...fadeIn()}
+            {...fadeIn(0.25)}
           >
             <img src={c.image} alt={c.title} className="w-full h-40 object-cover" />
             <div>
@@ -69,7 +75,7 @@ export function Menu() {
           <motion.article
             key={s.id}
             className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
-            {...fadeIn()}
+            {...fadeIn(0.25)}
           >
             <img src={s.image} alt={s.title} className="w-full h-40 object-cover" />
             <div>

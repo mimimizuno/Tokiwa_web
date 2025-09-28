@@ -40,14 +40,14 @@ export const BEANS = [
     id: "Ethiopia", 
     title: "エチオピア", 
     image: "/images/ethiopia_beans.png",
-    desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
+    desc: "ベリー系の果実感とナチュラルらしいチョコレートのようなフレーバー。そして何より濃厚な甘さと余韻の長さが飲み手の心を落ち着かせてくれます。",
     url: "https://berthcoffee.stores.jp/items/66d5906120bc0f0c0cfbd4e5"
   },
   { 
-    id: "Colombia",
-    title: "コロンビア",
+    id: "Tanzania",
+    title: "タンザニア",
     image: "/images/tanzania_beans.png",
-    desc: "メロン。",
+    desc: "ジャスミンのような華やかさと、ホワイトグレープのような上品な果実感。ダージリンのような紅茶感もあり、とてもエレガントな印象です。",
     url: "https://berthcoffee.stores.jp/items/669610a8db80ba0030ee05ee",
   }
 ]

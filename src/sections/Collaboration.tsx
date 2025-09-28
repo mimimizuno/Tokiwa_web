@@ -1,29 +1,22 @@
 import { motion } from "framer-motion";
+import { fadeIn } from "../shared/motion";
 import { COLLABS } from "../shared/data";
+import { InstaLinkCard } from "../components/InstaBookmarkCard";
 
 export function Collaboration() {
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold">Collabolation</h2>
-      <div className="grid grid-cols-1 gap-4">
+    <>
+      <motion.h1 className="section-title" {...fadeIn()}>
+        Collaboration
+      </motion.h1>
+      <p className="main-text">
+          豆を提供してくださる「BERTH COFFEE みなとみらい」、お菓子を提供してくださる「メリハリベイク」の店舗にもぜひ。
+        </p>
+      <div className="mt-6 grid grid-cols-1 gap-4">
         {COLLABS.map((c) => (
-          <motion.a
-            key={c.id}
-            href={c.instagram}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-4 p-4 border border-neutral-200 rounded-xl2 shadow-soft hover:bg-neutral-50"
-            whileHover={{ scale: 1.01 }}
-          >
-            <img src={c.logo} alt={c.name} className="w-14 h-14 rounded-full object-cover" />
-            <div>
-              <p className="font-medium">{c.name}</p>
-              <p className="text-sm text-neutral-600">{c.desc}</p>
-              <span className="text-xs text-neutral-500">Instagramへ</span>
-            </div>
-          </motion.a>
+          <InstaLinkCard key={c.id} name={c.name} url={c.url} image={c.image} desc={c.desc} />
         ))}
       </div>
-    </div>
+    </>
   );
 }

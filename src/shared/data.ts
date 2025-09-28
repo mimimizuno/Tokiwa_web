@@ -40,13 +40,15 @@ export const BEANS = [
     id: "Ethiopia", 
     title: "エチオピア", 
     image: "/images/ethiopia_beans.png",
-    desc: "ベリーっぽく、赤い果実系のフレーバー。後味は紅茶っぽい。",
+    desc: "ベリー系の果実感とナチュラルらしいチョコレートのようなフレーバー。そして何より濃厚な甘さと余韻の長さが飲み手の心を落ち着かせてくれます。",
+    url: "https://berthcoffee.stores.jp/items/66d5906120bc0f0c0cfbd4e5"
   },
   { 
-    id: "Colombia",
-    title: "コロンビア",
+    id: "Tanzania",
+    title: "タンザニア",
     image: "/images/tanzania_beans.png",
-    desc: "メロン。",
+    desc: "ジャスミンのような華やかさと、ホワイトグレープのような上品な果実感。ダージリンのような紅茶感もあり、とてもエレガントな印象です。",
+    url: "https://berthcoffee.stores.jp/items/669610a8db80ba0030ee05ee",
   }
 ]
 export const SWEETS = [
@@ -75,17 +77,17 @@ export const SWEETS = [
 
 export const COLLABS = [
   {
-    id: "beans-shop",
-    name: "Beans Partner",
-    logo: "/images/beans-partner.jpg",
-    desc: "豆の卸でご協力いただいています。",
-    instagram: "https://instagram.com/beans_partner",
+    id: "berthcoffee",
+    name: "BERTH COFFEE みなとみらい",
+    url: "https://www.instagram.com/berth_minatomirai/",
+    image: "/images/berthcoffee_icon.jpg",
+    desc: "open 8:00-18:00",
   },
   {
-    id: "sweets-shop",
-    name: "Sweets Partner",
-    logo: "/images/sweets-partner.jpg",
-    desc: "スイーツの卸でご協力いただいています。",
-    instagram: "https://instagram.com/sweets_partner",
+    id: "meriharibake",
+    name: "メリハリベイク",
+    url: "https://www.instagram.com/meriharibake/",
+    image: "/images/meriharibake_icon.jpg",
+    desc: "open 11:00-17:30 木曜定休",
   },
 ] as const;

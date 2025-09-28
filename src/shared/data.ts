@@ -77,17 +77,17 @@ export const SWEETS = [
 
 export const COLLABS = [
   {
-    id: "beans-shop",
-    name: "Beans Partner",
-    logo: "/images/beans-partner.jpg",
-    desc: "豆の卸でご協力いただいています。",
-    instagram: "https://instagram.com/beans_partner",
+    id: "berthcoffee",
+    name: "BERTH COFFEE みなとみらい",
+    url: "https://www.instagram.com/berth_minatomirai/",
+    image: "/images/berthcoffee_icon.jpg",
+    desc: "open 8:00-18:00",
   },
   {
-    id: "sweets-shop",
-    name: "Sweets Partner",
-    logo: "/images/sweets-partner.jpg",
-    desc: "スイーツの卸でご協力いただいています。",
-    instagram: "https://instagram.com/sweets_partner",
+    id: "meriharibake",
+    name: "メリハリベイク",
+    url: "https://www.instagram.com/meriharibake/",
+    image: "/images/meriharibake_icon.jpg",
+    desc: "open 11:00-17:30 木曜定休",
   },
 ] as const;

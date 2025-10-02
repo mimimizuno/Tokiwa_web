@@ -14,24 +14,24 @@ export const festival = {
 export const COFFEES = [
   {
     id: "hand-drip",
-    title: "Hand Drip",
-    image: "/images/handdrip_menu.png",
+    title: "ハンドドリップ",
+    image: "/images/handdrip.png",
     price: 500,
-    desc: "エチオピアとコロンビアの２種類から選択。一杯ずつ丁寧に抽出します。フィルターを通した綺麗な後味で、じんわりと甘くフルーティーなコーヒーです。",
+    desc: "お好みの豆からお選びいただけます。一杯ずつ丁寧に抽出します。フィルターを通した綺麗な後味で、じんわりと甘くフルーティーなコーヒーです。",
   },
   {
     id: "fp-hot",
-    title: "French Press (hot)",
-    image: "/images/frenchpress_menu.png",
+    title: "フレンチプレス (hot)",
+    image: "/images/frenchpress.png",
     price: 400,
-    desc: "エチオピアのみの提供。オイル感ごと抽出して、リッチな質感とフルーティーな余韻を楽しめます。",
+    desc: "状況に応じた豆で提供いたします。オイル感ごと抽出して、リッチな質感とフルーティーな余韻を楽しめます。",
   },
   {
     id: "fp-ice",
-    title: "French Press (ice)",
-    image: "/images/frenchpressice_menu.png",
+    title: "フレンチプレス (ice)",
+    image: "/images/frenchpressice.png",
     price: 400,
-    desc: "エチオピアのみの提供。冷たく澄んだフレンチプレス。より爽やかにフルーティーな余韻を楽しむことができます。",
+    desc: "状況に応じた豆で提供いたします。冷たく澄んだフレンチプレス。より爽やかにフルーティーな余韻を楽しむことができます。",
   },
 ] as const;
 
@@ -40,29 +40,47 @@ export const BEANS = [
     id: "Ethiopia", 
     title: "エチオピア", 
     image: "/images/ethiopia_beans.png",
-    desc: "ベリー系の果実感とナチュラルらしいチョコレートのようなフレーバー。そして何より濃厚な甘さと余韻の長さが飲み手の心を落ち着かせてくれます。",
-    url: "https://berthcoffee.stores.jp/items/66d5906120bc0f0c0cfbd4e5"
+    flavorNote: "ジャスミン、レモンキャンディ、ホワイトグレープ、クリーミーマウスフィール",
+    desc: "ウリ村のポテンシャルであるフレーバーの豊かさが特徴的です。華やかな香りと柑橘系の風味が特徴的。質感はとても滑らかです。",
+    url: "https://berthcoffee.stores.jp/items/68609ed07ae4bdc777985440"
   },
   { 
-    id: "Tanzania",
-    title: "タンザニア",
-    image: "/images/tanzania_beans.png",
-    desc: "ジャスミンのような華やかさと、ホワイトグレープのような上品な果実感。ダージリンのような紅茶感もあり、とてもエレガントな印象です。",
-    url: "https://berthcoffee.stores.jp/items/669610a8db80ba0030ee05ee",
+    id: "Honduras",
+    title: "ホンジュラス",
+    image: "/images/honduras_beans.png",
+    flavorNote: "オレンジ、プラム、ハーバル、ジューシー、コンプレックス、ブライトアシディティ",
+    desc: "オレンジや日向夏のようなフレッシュな柑橘系なフレーバーに加え、ホンジュラス特有のハーバルな印象もありとても生き生きとした味わいのコーヒー。",
+    url: "https://berthcoffee.stores.jp/items/65ee95a77ae10402beaa32c2",
+  },
+  { 
+    id: "Guatemala", 
+    title: "グアテマラ", 
+    image: "/images/guatemala_beans.png",
+    flavorNote: "オレンジ、クリーミーマウスフィール、アプリコット、ミルクチョコレート",
+    desc: "オレンジや赤リンゴのようなフレッシュなフレーバーと、浅煎りながらもミルクチョコレートのような甘い余韻が楽しめるバランスタイプのコーヒーです。",
+    url: "https://berthcoffee.stores.jp/items/6860a79c1b56ba3a2b2f59a3",
+  },
+  { 
+    id: "Brazil",
+    title: "ブラジル",
+    image: "/images/brazil_beans.png",
+    flavorNote: "オレンジ、クリーミーマウスフィール、アプリコット、キャラメル、アーモンド",
+    desc: "アーモンドのような香ばしさと、キャラメルのような味わい。少しオレンジのような果実感。酸味が苦手な方にお勧め！",
+    url: "https://berthcoffee.stores.jp/items/68de4582a0c07f23476de71f",
   }
 ]
 export const SWEETS = [
   { 
     id: "cookie",
     title: "クッキー", 
-    image: "/images/cookie.png",
+    image: "/images/cookie.JPG",
     price: 400,
     desc: "オール米粉でグルテンフリー。外側はサクッと、中心にかけてチューイー。",
   },
   { 
     id: "biscotti", 
     title: "ビスコッティ", 
-    image: "/images/biscotti.png", 
+    image: "/images/biscotti.JPG", 
     price: 400,
     desc: "オール米粉でグルテンフリー。固すぎないビスコッティで、サクッと軽いので思わず手が進んじゃいます！", 
   },

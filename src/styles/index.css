@@ -49,14 +49,6 @@ img, video { display:block; max-width:100%; height:auto; }
   @apply text-2xl font-semibold py-6;
 }
 
-/* 横スクロール（カードカルーセル用） 1枚ごとに止まるように設定 */
-@utility row-snap {
-  scroll-snap-type: x mandatory;
-}
-@utility card-snap {
-  scroll-snap-align: start;
-}
-
 @utility card {
   @apply rounded-2xl border border-neutral-200 p-4 shadow-soft overflow-hidden bg-white;
 }
@@ -103,4 +95,9 @@ img, video { display:block; max-width:100%; height:auto; }
 
 @utility map-frame {
   @apply overflow-hidden rounded-2xl shadow-soft;
+}
+
+/* ==================== Menu ==================== */
+@utility card-scroll {
+  @apply mt-3 flex gap-4 overflow-x-auto overflow-y-hidden pb-2 snap-x snap-mandatory overscroll-x-contain;
 }

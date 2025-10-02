@@ -19,6 +19,9 @@ export function Menu() {
       <motion.h2 className="accent-text mt-10" {...fadeIn(0.20)}>
         Beans
       </motion.h2>
+      <p className="main-text mt-3">
+        エチオピア、ホンジュラス、グアテマラという３種類の豆を用意しています。
+      </p>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
         {BEANS.map((b) => (
           <motion.a
@@ -47,7 +50,8 @@ export function Menu() {
         Coffee
       </motion.h2>
       <p className="main-text mt-3">
-        ハンドドリップではエチオピアとコロンビアの２種類から選ぶことができます。フレンチプレスはエチオピアでの提供となります。
+        ハンドドリップではエチオピア、ホンジュラス、グアテマラの３種類から選ぶことができます。フレンチプレスは３種類のうち状況に応じてご用意する豆が変わるので、種類はお選びできません。
+        豆ごとの個性をお楽しみください。
       </p>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
         {COFFEES.map((c) => (
@@ -70,6 +74,9 @@ export function Menu() {
       <motion.h2 id="sweets-menu" className="accent-text mt-10" {...fadeIn(0.20)}>
         Sweets
       </motion.h2>
+      <p className="main-text mt-3">
+        お菓子はクッキー、ビスコッティ、パウンドケーキからお選びいただけます。
+      </p>
       <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
         {SWEETS.map((s) => (
           <motion.article
@@ -92,7 +99,7 @@ export function Menu() {
         Set
       </motion.h2>
       <p className="main-text">
-        ハンドドリップとお好きなお菓子１つで850円のセットにすることができます。ぜひ一杯一杯丁寧に淹れたコーヒーと美味しいお菓子の組み合わせをお試しください。
+        ハンドドリップとお好きなお菓子を購入すると50円引きになります。ぜひ一杯一杯丁寧に淹れたコーヒーと美味しいお菓子の組み合わせをお試しください。
       </p>
     </>
   );

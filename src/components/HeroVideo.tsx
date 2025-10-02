@@ -1,13 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-/**
- * 8秒の縦型ドリップ動画を背景に全画面表示。
- * 後半(50%以降)で動画を薄くし(暗幕ではなくvideo自体のopacityを下げる)、
- * タイトル「Coffee Stand 305」を前面にフェードイン。
- * スクロールすれば通常のページに遷移できるヒーロー。
- */
-
 export const HeroVideo: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isDim, setIsDim] = useState(false); // 動画を薄くするフェーズ

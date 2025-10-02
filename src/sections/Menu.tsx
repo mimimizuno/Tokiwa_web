@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../shared/motion";
 import { BEANS, COFFEES, SWEETS } from "../shared/data";
+import { BeansRoll } from "../components/BeansRoll";
 
 export function Menu() {
   return (
@@ -16,20 +17,21 @@ export function Menu() {
       </p>
 
       {/* Beans */}
+      <BeansRoll src="/images/bean_icon.png" className="mt-6" />
       <motion.h2 className="accent-text mt-10" {...fadeIn(0.20)}>
         Beans
       </motion.h2>
       <p className="main-text mt-3">
-        エチオピア、ホンジュラス、グアテマラという３種類の豆を用意しています。
+        コーヒー豆はエチオピア、ホンジュラス、グアテマラの３種類を用意しています。
       </p>
-      <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
+      <div className="card-scroll">
         {BEANS.map((b) => (
           <motion.a
             key={b.id}
             href={b.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
+            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] card snap-start"
             {...fadeIn(0.25)}
           >
             <img src={b.image} alt={b.title} className="w-full h-40 object-cover" />
@@ -51,13 +53,13 @@ export function Menu() {
       </motion.h2>
       <p className="main-text mt-3">
         ハンドドリップではエチオピア、ホンジュラス、グアテマラの３種類から選ぶことができます。フレンチプレスは３種類のうち状況に応じてご用意する豆が変わるので、種類はお選びできません。
-        豆ごとの個性をお楽しみください。
+        注文の際にスタッフに豆の種類をお聞きください。
       </p>
-      <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
+      <div className="card-scroll">
         {COFFEES.map((c) => (
           <motion.article
             key={c.id}
-            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
+            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] card snap-start"
             {...fadeIn(0.25)}
           >
             <img src={c.image} alt={c.title} className="w-full h-40 object-cover" />
@@ -77,7 +79,7 @@ export function Menu() {
       <p className="main-text mt-3">
         お菓子はクッキー、ビスコッティ、パウンドケーキからお選びいただけます。
       </p>
-      <div className="mt-3 flex gap-4 overflow-x-auto pb-2 scroll-snap-x">
+      <div className="card-scroll">
         {SWEETS.map((s) => (
           <motion.article
             key={s.id}

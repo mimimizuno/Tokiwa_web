@@ -14,22 +14,22 @@ export const festival = {
 export const COFFEES = [
   {
     id: "hand-drip",
-    title: "Hand Drip",
-    image: "/images/handdrip_menu.png",
+    title: "ハンドドリップ",
+    image: "/images/handdrip.png",
     price: 500,
     desc: "お好みの豆からお選びいただけます。一杯ずつ丁寧に抽出します。フィルターを通した綺麗な後味で、じんわりと甘くフルーティーなコーヒーです。",
   },
   {
     id: "fp-hot",
-    title: "French Press (hot)",
-    image: "/images/frenchpress_menu.png",
+    title: "フレンチプレス (hot)",
+    image: "/images/frenchpress.png",
     price: 400,
     desc: "状況に応じた豆で提供いたします。オイル感ごと抽出して、リッチな質感とフルーティーな余韻を楽しめます。",
   },
   {
     id: "fp-ice",
-    title: "French Press (ice)",
-    image: "/images/frenchpressice_menu.png",
+    title: "フレンチプレス (ice)",
+    image: "/images/frenchpressice.png",
     price: 400,
     desc: "状況に応じた豆で提供いたします。冷たく澄んだフレンチプレス。より爽やかにフルーティーな余韻を楽しむことができます。",
   },

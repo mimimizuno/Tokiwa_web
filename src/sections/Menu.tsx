@@ -83,7 +83,7 @@ export function Menu() {
         {SWEETS.map((s) => (
           <motion.article
             key={s.id}
-            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] scroll-snap-item card"
+            className="min-w-[76%] max-w-[76%] md:min-w-[360px] md:max-w-[360px] card snap-start"
             {...fadeIn(0.25)}
           >
             <img src={s.image} alt={s.title} className="w-full h-40 object-cover" />

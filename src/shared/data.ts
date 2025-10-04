@@ -53,14 +53,6 @@ export const BEANS = [
     url: "https://berthcoffee.stores.jp/items/65ee95a77ae10402beaa32c2",
   },
   { 
-    id: "Guatemala", 
-    title: "グアテマラ", 
-    image: "/images/guatemala_beans.png",
-    flavorNote: "オレンジ、クリーミーマウスフィール、アプリコット、ミルクチョコレート",
-    desc: "オレンジや赤リンゴのようなフレッシュなフレーバーと、浅煎りながらもミルクチョコレートのような甘い余韻が楽しめるバランスタイプのコーヒーです。",
-    url: "https://berthcoffee.stores.jp/items/6860a79c1b56ba3a2b2f59a3",
-  },
-  { 
     id: "Brazil",
     title: "ブラジル",
     image: "/images/brazil_beans.png",
@@ -75,7 +67,7 @@ export const SWEETS = [
     title: "クッキー", 
     image: "/images/cookie.JPG",
     price: 400,
-    desc: "オール米粉でグルテンフリー。外側はサクッと、中心にかけてチューイー。",
+    desc: "オール米粉でグルテンフリー。外側はサクッと、中はしっとり食感を楽しめます！",
   },
   { 
     id: "biscotti", 
@@ -89,7 +81,7 @@ export const SWEETS = [
     title: "パウンドケーキ", 
     image: "/images/poundcake.png", 
     price: 400,
-    desc: "ふわふわしっとり食感のパウンドケーキは食べごたえもあり、フルーティーなコーヒーとも相性抜群！", 
+    desc: "ふわふわしっとり食感で食べごたえもあり、フルーティーなコーヒーとも相性抜群！", 
   },
 ] as const;
 

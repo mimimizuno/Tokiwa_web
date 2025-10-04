@@ -22,7 +22,7 @@ export function Menu() {
         Beans
       </motion.h2>
       <p className="main-text mt-3">
-        コーヒー豆はエチオピア、ホンジュラス、グアテマラの３種類を用意しています。
+        コーヒー豆はエチオピア、ホンジュラス、ブラジルの３種類を用意しています。
       </p>
       <div className="card-scroll">
         {BEANS.map((b) => (
@@ -52,7 +52,7 @@ export function Menu() {
         Coffee
       </motion.h2>
       <p className="main-text mt-3">
-        ハンドドリップではエチオピア、ホンジュラス、グアテマラの３種類から選ぶことができます。フレンチプレスは３種類のうち状況に応じてご用意する豆が変わるので、種類はお選びできません。
+        ハンドドリップではエチオピア、ホンジュラス、ブラジルの３種類から選ぶことができます。フレンチプレスは３種類のうち状況に応じてご用意する豆が変わるので、種類はお選びできません。
         注文の際にスタッフに豆の種類をお聞きください。
       </p>
       <div className="card-scroll">

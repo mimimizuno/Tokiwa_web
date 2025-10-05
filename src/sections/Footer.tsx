@@ -6,7 +6,7 @@ export function Footer() {
             <img src="/images/sososo_icon.jpg" alt="profile" className="w-10 h-10 rounded-full object-cover" />
             <div>
               <p className="main-text">代表 / 水野 創樹</p>
-              <p>フルーティーなコーヒーに魅了され、美味しさを日々追求しています。Instagramでコーヒーに振り回される日常を覗けます。</p>
+              <p>フルーティーなコーヒーに魅了され、美味しさを日々追求しています。Instagramでコーヒーに振り回される日常を覗けます。気軽にフォローしてください。</p>
               <a 
                 href="https://instagram.com/sososo_coffee"
                 target="_blank"

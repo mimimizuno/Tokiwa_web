@@ -44,19 +44,35 @@ export function LocationDate() {
           <p>{festival.venue.address}</p>
         </motion.div>
 
-        <motion.div
-          className="map-frame"
-          {...fadeIn(0.30, 0.6)}
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.219752376247!2d139.58689697692768!3d35.47410637265468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859677d3540eb%3A0xe579713478f13abc!2z44CSMjQwLTAwNjcg56We5aWI5bed55yM5qiq5rWc5biC5L-d5Zyf44Kx6LC35Yy65bi455uk5Y-w77yX77yZ!5e0!3m2!1sja!2sjp!4v1758687322890!5m2!1sja!2sjp"
-            width="100%"
-            height="320"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <motion.h2 className="accent-text" {...fadeIn(0.20)}>
+         簡易マップ
+        </motion.h2>
+        <p className="main-text">サイトE-4にて出店いたします。理工学講義棟A沿いでテント出店します。Google Mapからもご参照ください。</p>
+
+        <motion.div className="mt-6 space-y-4" {...fadeIn(0.3, 0.6)}>
+          {/* 簡易マップ画像 */}
+          <div className="map-frame">
+            <img
+              src="/images/map.png"
+              alt="常盤祭マップ"
+              className="w-full object-cover"
+            />
+          </div>
+
+          {/* Google Mapリンク */}
+          <div className="text-center">
+            <a
+              href="https://www.google.com/maps/place/%E6%A8%AA%E6%B5%9C%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6/@35.4741064,139.5868969,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1 text-url underline decoration-url/40 underline-offset-4 group-hover:decoration-url"
+            >
+              Google Mapで見る
+              <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+                <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
         </motion.div>
       </div>
     </>

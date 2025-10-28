@@ -62,7 +62,7 @@ export function LocationDate() {
           {/* Google Mapリンク */}
           <div className="text-center">
             <a
-              href="https://www.google.com/maps/place/%E6%A8%AA%E6%B5%9C%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6/@35.4741064,139.5868969,17z"
+              href="https://maps.app.goo.gl/1o5zUFGPSxWDQTA26"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-1 text-url underline decoration-url/40 underline-offset-4 group-hover:decoration-url"
